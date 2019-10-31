@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+
+h1 {
+    color: white;
+    font-size: 5rem;
+}
+
+main {
+    min-height: calc(100vh - 202px);
+}
+
+footer {
+    margin-top: auto;
+}
+
+.arrow{
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+i:hover {
+  transform: scale(1.1);
+  transition: 400ms;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
+
+.afo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: black;
+    width: 100%;
+    height: 100vh;
+}
+
+.i {
+    position: fixed;
+}
+
+nav {
+    position: fixed!important;
+    width: 7%;
+    z-index: 2000;
+    border-bottom-right-radius: 3.75rem;
+    transition: 500ms;
+}
+
+nav:hover {
+    opacity: 1!important;
+    transition: 400ms!important;
+}
+
+.nav-link:hover {
+    color: lightgray!important;
+}
+
+.coll ul li {
+    display: none;
+    transition: 500ms;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+.block {
+    width: 100%;
+    height: auto;
+    background: white;
+}
+
+.block img {
+    filter: contrast(60%);
+    transition: 400ms;
+}
+
+.block img:hover {
+    transition: 400ms;
+    filter: contrast(100%);
+    cursor: pointer;
+}
+
+.block2 {
+    width: 100%;
+    height: auto;
+    background: white;
+}
+
+.content-card {
+    text-align: center;
+}
