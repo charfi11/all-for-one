@@ -8,4 +8,5 @@ $req->execute();
 $reqG = $bdd->prepare('SELECT * FROM gallery');
 $reqG->execute();
 
+
 ?>

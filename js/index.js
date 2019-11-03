@@ -24,7 +24,11 @@ $(".arrow").click(function() {
 });
 
 $('.plus').click(function(){
-  $('.card-dis').slideToggle('slow');
+var id = $(this).attr('id');
+  console.log($('#'+id))
+  $('#'+id).click(function(){
+   $('.card-dis').show('slow');
+  })
 });
 
 $('#gallery').click(function(){
@@ -37,10 +41,29 @@ $('#member').click(function(){
   $('.gallery').hide('slow');
   });
 
-$('.block-gall').mouseover(function(){
-  $('.none').fadeIn('slow');
-})
+$('.block-gall').each(function(){
+  var id = $(this).attr('id');
+  $("#"+id).click(function(){
+  var a = $(this).children()[0].src;
+  console.log(a);
+  $('#m').fadeIn(500);
+  $(".divmodal").append("<img src="+a+" id='modal'>");
+  });
+  var app = "<div class='like'><i class='fas fa-heart text-red none'></i></div>";
+    $('#'+id).mouseenter( function(){
+      $("#"+id).append(app);
+      $('.like').mouseenter(function(event){
+        event.stopPropagation();
+          });
+    $('.none').fadeIn(500);
+  });
+  $('#'+id).mouseleave(function(){
+    $('.like').fadeOut(500);
+    $('.like').remove();
+  });
+});
 
-$('.block-gall').mouseleave(function(){
-  $('.none').hide('slow');
-})
+$('.divmodal').click(function(){
+  $('.divmodal').hide();
+   $('#modal').remove();
+});

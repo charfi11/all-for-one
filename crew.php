@@ -26,7 +26,7 @@ include('crud/co_bdd.php');
                           <a class="nav-link text-white" href="crew.php">l'équipe</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link text-white" href="gallery.php">Gallery</a>
+                          <a class="nav-link text-white" href="gallery.php">Galerie</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Contact</a>
