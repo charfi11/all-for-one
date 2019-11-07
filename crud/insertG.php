@@ -9,4 +9,6 @@ $reqG->execute(array(
    $_POST['imgG']
 ));
 
+header('location: ../admin.php');
+
 ?>

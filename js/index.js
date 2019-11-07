@@ -25,7 +25,6 @@ $(".arrow").click(function() {
 
 $('.plus').click(function(){
 var id = $(this).attr('id');
-  console.log($('#'+id))
   $('#'+id).click(function(){
    $('.card-dis').show('slow');
   })
@@ -41,29 +40,72 @@ $('#member').click(function(){
   $('.gallery').hide('slow');
   });
 
+$(document).ready(function(){
 $('.block-gall').each(function(){
   var id = $(this).attr('id');
-  $("#"+id).click(function(){
-  var a = $(this).children()[0].src;
-  console.log(a);
-  $('#m').fadeIn(500);
-  $(".divmodal").append("<img src="+a+" id='modal'>");
+  var url = "crud/selectLike.php";
+  $('#'+id).click(function(){
+   var url = 'crud/selectLikes.php';
+   $.get(url, {id}).done(function(res){
+       $('.divspan').append("<span class='liked'><p>"+res+" <i class='fas fa-heart'></i>"+"</p></span>")
+    });
   });
-  var app = "<div class='like'><i class='fas fa-heart text-red none'></i></div>";
+    $.ajax({
+     type: 'post',
+     url: url,
+     dataType: 'html',
+     success:function(data){
+    var app = "<div class='like' id="+data+" name='like'><i class='fas fa-heart text-red none'></i></div>";
     $('#'+id).mouseenter( function(){
       $("#"+id).append(app);
+      $('.like').click(function(e){
+        e.preventDefault();
+        var url = 'crud/insertL.php';
+        var gallery = $(this).parent().attr('id');
+        var like = $(this).attr('id');
+        var data = {gallery: gallery, like: like};
+          $.ajax({
+           type: 'post',
+           url: url,
+           data: data,
+           success: function(res){
+             $('.liked').replaceWith('.liked');
+             $('.none').css('color', 'red')
+             $('.none').animate({
+              height: "toggle",
+              opacity: "toggle",
+            }, "slow" );
+           }
+        });
+        });
       $('.like').mouseenter(function(event){
         event.stopPropagation();
           });
+          $('.like').click(function(event){
+            event.stopPropagation();
+              });
     $('.none').fadeIn(500);
   });
   $('#'+id).mouseleave(function(){
     $('.like').fadeOut(500);
     $('.like').remove();
   });
+}
+});
+});
+});
+
+$('.img-gallery').each(function(){
+  var id = $(this).attr('id');
+  var a = $(this)[0].src;
+  $("#"+id).click(function(){
+  $('#m').fadeIn(500);
+  $(".divmodal").append("<img src="+a+" id='modal'>");
+  });
 });
 
 $('.divmodal').click(function(){
-  $('.divmodal').hide();
+  $('.divmodal').fadeOut(500);
    $('#modal').remove();
+   $('.liked').remove();
 });
