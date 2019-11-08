@@ -18,21 +18,21 @@ include('crud/co_bdd.php');
     </head>
   <body>
   <header>
-          <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
               <a class="navbar-brand text-white" href="index.html">AFO</a>
               <div class="collapse navbar-collapse coll" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link text-white" href="index.html">Acceuil</a>
+                    <a class="nav-link text-white" href="index.html"><i class="fas fa-home"></i> Acceuil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white" href="crew.php" target="_self">l'équipe</a>
+                    <a class="nav-link text-white" href="crew.php" target="_self"><i class="fas fa-users"></i> l'équipe</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white" href="gallery.php">Galerie</a>
+                    <a class="nav-link text-white" href="gallery.php"><i class="fas fa-image"></i> Galerie</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link text-white" href="#">Contact</a>
+                      <a class="nav-link text-white" href="#"><i class="fas fa-id-card"></i> Contact</a>
                     </li>
                 </ul>
               </div>
@@ -42,10 +42,11 @@ include('crud/co_bdd.php');
           <div class="divmodal" id='m'>
           <div class="divspan"></div>
           </div>
-            <div class="mt-5 mb-5">
-    <h1>Galerie</h1>
+            <div class="mt-5" style="width: 100%;">
+            <h1 class="mt-4 font-weight-bolder text-dark" style='font-size: 8rem'>Galerie.</h1>
 </div>
 </div>
+<div class="d-flex justify-content-center mb-5">
     <div class="d-flex flex-wrap bg-white">
     <?php
   
@@ -60,7 +61,63 @@ include('crud/co_bdd.php');
     <?php }
     ?>
     </div>
-  
+    </div>
+                    <!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+<!-- Footer Elements -->
+<div class="container">
+
+  <!-- Grid row-->
+  <div class="row">
+
+    <!-- Grid column -->
+    <div class="col-md-12">
+      <div class="mb-5 mt-5 d-flex justify-content-center">
+
+        <!-- Facebook -->
+        <a class="fb-ic">
+          <i class="fab fa-facebook-f fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        <!-- Twitter -->
+        <a class="tw-ic">
+          <i class="fab fa-twitter fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        <!-- Google +-->
+        <a class="gplus-ic">
+          <i class="fab fa-google-plus-g fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        <!--Linkedin -->
+        <a class="li-ic">
+          <i class="fab fa-linkedin-in fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        <!--Instagram-->
+        <a class="ins-ic">
+          <i class="fab fa-instagram fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        <!--Pinterest-->
+        <a class="pin-ic">
+          <i class="fab fa-pinterest fa-lg text-white fa-2x"> </i>
+        </a>
+      </div>
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row-->
+
+</div>
+<!-- Footer Elements -->
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3 text-white">© 2019 Copyright:
+  <p class='text-white'>L'association All for one, Charfi Mohamed</p>
+</div>
+<!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

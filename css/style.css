@@ -3,8 +3,11 @@
     padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body {
-    background: black;
+  background: #F5F5DC;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -60,23 +63,78 @@ form {
     animation-name: fadeInDown;
   }
 
-.card-dis {
-    display: none;
-    text-align: center;
+.card {
+  box-shadow: -1px 2px 7px 1px rgba(0, 0, 0, 0.2); 
+  transition: 400ms;
+}
+
+.card:hover {
+  cursor: pointer;
+  animation: fade-slide-downc .6s ease-out forwards;
+}
+
+@keyframes fade-slide-downc {
+  0% {
+    opacity: 1;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 0.8;
+    transform: none;
+  }
+}
+
+.card:hover img {
+  animation: fade-slide-downi .7s ease-out forwards;
+}
+
+@keyframes fade-slide-downi {
+  0% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 0.7;
+    transform: none;
+  }
+}
+
+.card:hover .card-dis {
+  animation: fade-slide-down .5s ease-out forwards;
+}
+
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.card:hover .cardtitle {
+  animation: fade-slide-left .5s ease-out forwards;
+}
+
+@keyframes fade-slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .card-body {
     padding: 0!important;
 }
 
-.card img {
-    filter: contrast(50%);
-    transition: 300ms;
-}
-
-.card:hover img {
-    filter: contrast(100%);
-    transition: 300ms;
+.ins {
+  margin-bottom: auto;
 }
 
 .arrow{
@@ -86,8 +144,6 @@ form {
 }
 
 i:hover {
-  transform: scale(1.1);
-  transition: 400ms;
   cursor: pointer;
 }
 
@@ -118,7 +174,7 @@ i:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: black;
+    background: #FFD700;
     width: 100%;
     height: 100vh;
 }
@@ -128,11 +184,18 @@ i:hover {
 }
 
 nav {
+    background: gray;
     position: fixed!important;
-    width: 7%;
+    width: auto;
     z-index: 2000;
     border-bottom-right-radius: 3.75rem;
     transition: 500ms;
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+}
+
+nav ul li {
+  margin-left: 2%;
 }
 
 nav:hover {
@@ -141,12 +204,12 @@ nav:hover {
 }
 
 .nav-link:hover {
-    color: lightgray!important;
+    color: lightblue!important;
 }
 
 .coll ul li {
-    display: none;
     transition: 500ms;
+    width: 8em;
 }
 
 a {
@@ -170,7 +233,7 @@ a:hover {
 .block {
     width: 100%;
     height: auto;
-    background: white;
+    background: #F5F5DC;
 }
 
 .block-title {
@@ -280,16 +343,18 @@ a:hover {
   }
 
   .img-gallery {
-    transition: 700ms;
     margin: 0;
     filter: grayscale(100%);
     width: 17em;
     height: 13em;
+    border: solid 1px lightgrey;
+    cursor: pointer;
   }
 
   .block-gall:hover .img-gallery {
     filter: grayscale(50%);
     transition: 700ms;
+    border: none;
   }
 
 .none {
@@ -352,4 +417,67 @@ a:hover {
 .divspan p {
 font-size: 1.2em;
 font-weight: bold;
+}
+
+.firstblock {
+  width: 50%;
+  height: 100vh;
+  background: #FFD700;
+}
+
+.secondblock {
+  width: 50%;
+  height: 100vh;
+  background: #F5F5DC;
+  text-align: center;
+}
+
+.blockms {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.blockms h2 {
+font-size: 4rem;
+animation-name: fadeInDown;
+animation-duration: 1.5s;
+  }
+
+.blockms p {
+  line-height: 32px;
+  animation-name: fadeInDown;
+  animation-duration: 1.5s;
+}
+
+.blockms i {
+  animation-name: fadeInDown;
+  animation-duration: 1.3s;
+}
+
+.blockms a {
+  color: black;
+}
+
+.winds {
+  min-height: 300px;
+}
+
+.citation {
+  font-family: 'Liu Jian Mao Cao', cursive;
+  letter-spacing: .2rem;
+  font-style: italic;
+  margin-top: auto;
+  margin-bottom: auto;
+  animation-name: fadeInDown;
+  animation-duration: 1.5s;
+}
+
+.memb {
+  margin-right: 35%;
+  animation-name: fadeInDown;
+  animation-duration: 1.5s;
+}
+
+footer {
+  background: black;
 }

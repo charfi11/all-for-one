@@ -1,13 +1,3 @@
-$(document).ready(function(){
-  $('nav').css('background', '#6d071a');
-  $('.coll ul li').show('slow');
-  $('nav').css('width', '30%');
-});
-
-$(window).scroll(function(){
-  
-});
-
 $(window).scroll(function() {
   if ($(document).scrollTop() > 500) {
       $('nav').css('opacity', '0.6');
@@ -21,13 +11,6 @@ $(".arrow").click(function() {
   $('html,body').animate({
       scrollTop: $(".block2").offset().top},
       'slow');
-});
-
-$('.plus').click(function(){
-var id = $(this).attr('id');
-  $('#'+id).click(function(){
-   $('.card-dis').show('slow');
-  })
 });
 
 $('#gallery').click(function(){
@@ -109,3 +92,14 @@ $('.divmodal').click(function(){
    $('#modal').remove();
    $('.liked').remove();
 });
+
+// $('.card').each(function(){
+// var id = $(this).attr('id');
+// console.log(id);
+// $('#'+id).mouseenter(function(){
+
+// });
+// $('#'+id).mouseleave(function(){
+//   $().remove();
+// });
+// });
