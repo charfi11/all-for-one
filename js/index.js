@@ -7,9 +7,25 @@ $(window).scroll(function() {
   }
 });
 
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 10) {
+      $('.up').css('opacity', '0.4');
+  }
+  else {
+      $('.up').css('opacity', '1');
+  }
+});
+
 $(".arrow").click(function() {
   $('html,body').animate({
       scrollTop: $(".block2").offset().top},
+      'slow');
+});
+
+$(".up").click(function() {
+  console.log('ok');
+  $('html,body').animate({
+      scrollTop: $("header").offset().top},
       'slow');
 });
 
@@ -103,3 +119,27 @@ $('.divmodal').click(function(){
 //   $().remove();
 // });
 // });
+
+$('.contact').submit(function(e){
+  e.preventDefault();
+var url = 'mail.php';
+var data = {
+  name: $("#form_name").val(),
+  email: $("#form_email").val(),
+  message: $("#msg_text").val()
+};
+$.ajax({
+  type: 'post',
+  url: url,
+  data: data,
+  success: function(res){
+$('.successmodal').fadeIn();
+$('.successmodal').append("<div class='success d-flex flex-column align-items-center mt-3'><p class='mt-2'>"+res+"</p><small class='text-secondary mb-2'>Vous allez être redirigé dans quelques secondes.</small><div class='spinner-border mb-3 mt-3 text-info' role='status'><span class='sr-only'>Loading...</span></div></div></div>");
+setTimeout(
+  function() 
+  {
+    window.location = 'index.html';
+  }, 4000);
+}
+});
+});

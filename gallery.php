@@ -37,6 +37,9 @@ include('crud/co_bdd.php');
                 </ul>
               </div>
             </nav>
+            <div class="up">
+          <i class="fas fa-arrow-up"></i>
+        </div>
           </header>
           <div class="d-flex justify-content-center">
           <div class="divmodal" id='m'>
@@ -82,14 +85,6 @@ include('crud/co_bdd.php');
         <!-- Twitter -->
         <a class="tw-ic">
           <i class="fab fa-twitter fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
-        </a>
-        <!-- Google +-->
-        <a class="gplus-ic">
-          <i class="fab fa-google-plus-g fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
-        </a>
-        <!--Linkedin -->
-        <a class="li-ic">
-          <i class="fab fa-linkedin-in fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
         </a>
         <!--Instagram-->
         <a class="ins-ic">

@@ -32,26 +32,31 @@
               </div>
             </nav>
                 </header>
+                <div class="up">
+          <i class="fas fa-arrow-up"></i>
+        </div>
                 <div class="contactblock">
                 <div class="parallax-window" data-parallax="scroll" data-image-src="img/b.jpg"></div>
-                </div>       
+                </div>     
+                <div class="successmodal" id="nonemodal">
+</div>  
 <div class="d-flex flex-column align-items-center">
-                <form method='post' action='mail.php' class='contact'>
+                <form class='contact'>
                     <h2 class="mt-2 mb-4 font-weight-bold">Contact</h2>
   <div class="form-group">
     <label for="nom">Nom de la structure</label>
-    <input type="text" name='nom' class="form-control" placeholder="Nom de la structure" required>
+    <input type="text" name='name' id='form_name' class="form-control" placeholder="Nom de la structure" required>
   </div>
   <div class="form-group">
     <label for="mail">Email</label>
-    <input type="text" name='email' class="form-control" placeholder="Email" required>
+    <input type="text" name='email' id="form_email" class="form-control" placeholder="Email" required>
   </div>
   <div class="form-group">
     <label for="message">Votre message</label>
-    <textarea type="mail" name="message" class="form-control" placeholder="Votre message" required></textarea>
+    <textarea type="mail" name="message" id="msg_text" class="form-control" placeholder="Votre message" required></textarea>
   </div>
   <div class="d-flex justify-content-center mt-4 mb-1">
-  <button type="submit" class="btn btn-success">Envoyer</button>
+  <button class="btn btn-success">Envoyer</button>
   </div>
 </form>
 </div>
@@ -78,14 +83,6 @@
         <!-- Twitter -->
         <a class="tw-ic">
           <i class="fab fa-twitter fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
-        </a>
-        <!-- Google +-->
-        <a class="gplus-ic">
-          <i class="fab fa-google-plus-g fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
-        </a>
-        <!--Linkedin -->
-        <a class="li-ic">
-          <i class="fab fa-linkedin-in fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
         </a>
         <!--Instagram-->
         <a class="ins-ic">

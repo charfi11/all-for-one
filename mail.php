@@ -6,13 +6,13 @@
     $entete .= 'From: ' . $_POST['email'] . "\r\n";
 
     $message = '<h1>Message envoyé depuis la page Contact de All for one</h1>
-    <p><b>Nom : </b>' . $_POST['nom'] . '<br>
+    <p><b>Nom : </b>' . $_POST['name'] . '<br>
     <b>Email : </b>' . $_POST['email'] . '<br>
     <b>Message : </b>' . $_POST['message'] . '</p>';
 
     $retour = mail('m.charfi232@laposte.net', 'Envoi depuis page Contact', $message, $entete);
     if($retour) {
-        echo '<p>Votre message a bien été envoyé.</p>';
+        echo '<p>Votre email a bien été envoyé.</p>';
     }
 }
     ?>
