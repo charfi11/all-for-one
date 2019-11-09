@@ -1,9 +1,3 @@
-<?php
-
-include('crud/co_bdd.php');
-
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,11 +8,11 @@ include('crud/co_bdd.php');
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>AFO Gallery</title>
-    </head>
+    <title>AFO Contact</title>
+  </head>
   <body>
   <header>
-  <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
               <a class="navbar-brand text-white" href="index.html">AFO</a>
               <div class="collapse navbar-collapse coll" id="navbarNav">
                 <ul class="navbar-nav">
@@ -37,33 +31,35 @@ include('crud/co_bdd.php');
                 </ul>
               </div>
             </nav>
-          </header>
-          <div class="d-flex justify-content-center">
-          <div class="divmodal" id='m'>
-          <div class="divspan"></div>
-          </div>
-            <div class="mt-5" style="width: 100%;">
-            <h1 class="mt-4 font-weight-bolder text-dark" style='font-size: 8rem'>Galerie.</h1>
+                </header>
+                <div class="contactblock">
+                <div class="parallax-window" data-parallax="scroll" data-image-src="img/b.jpg"></div>
+                </div>       
+<div class="d-flex flex-column align-items-center">
+                <form method='post' action='mail.php' class='contact'>
+                    <h2 class="mt-2 mb-4 font-weight-bold">Contact</h2>
+  <div class="form-group">
+    <label for="nom">Nom de la structure</label>
+    <input type="text" name='nom' class="form-control" placeholder="Nom de la structure" required>
+  </div>
+  <div class="form-group">
+    <label for="mail">Email</label>
+    <input type="text" name='email' class="form-control" placeholder="Email" required>
+  </div>
+  <div class="form-group">
+    <label for="message">Votre message</label>
+    <textarea type="mail" name="message" class="form-control" placeholder="Votre message" required></textarea>
+  </div>
+  <div class="d-flex justify-content-center mt-4 mb-1">
+  <button type="submit" class="btn btn-success">Envoyer</button>
+  </div>
+</form>
 </div>
-</div>
-<div class="d-flex justify-content-center mb-5">
-    <div class="d-flex flex-wrap bg-white">
-    <?php
-  
-    include('crud/select.php');
+<main>
+</main>
 
-    while($donnees = $reqG->fetch()){
-      $rand = rand(1,100000);
-    ?>
-    <div class="block-gall d-flex justify-content-center" name='gallery' id="<?php echo $donnees['id_gallery'] ?>">
-    <img src="gallery/<?php echo $donnees['img']?>" alt="gallery" id="<?php echo $rand ?>" class='img-gallery ml-2 mt-1 mb-2'>
-    </div>
-    <?php }
-    ?>
-    </div>
-    </div>
-                    <!-- Footer -->
-<footer class="page-footer font-small cyan darken-3">
+ <!-- Footer -->
+ <footer class="page-footer font-small cyan darken-3">
 
 <!-- Footer Elements -->
 <div class="container">
@@ -121,8 +117,9 @@ include('crud/co_bdd.php');
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/parallax.js"></script>
     <script src="js/index.js"></script>
-  </body>
+</body>
 </html>

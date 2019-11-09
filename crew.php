@@ -30,7 +30,7 @@ include('crud/co_bdd.php');
                     <a class="nav-link text-white" href="gallery.php"><i class="fas fa-image"></i> Galerie</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link text-white" href="#"><i class="fas fa-id-card"></i> Contact</a>
+                      <a class="nav-link text-white" href="contact.php"><i class="fas fa-id-card"></i> Contact</a>
                     </li>
                 </ul>
               </div>
