@@ -17,7 +17,7 @@ include('crud/co_bdd.php');
   <body>
         <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-              <a class="navbar-brand text-white" href="index.html">AFO</a>
+              <a class="navbar-brand text-white" href="index.html"><img src="img/logo.png" alt="logo" style="width:2em;"></a>
               <div class="collapse navbar-collapse coll" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
